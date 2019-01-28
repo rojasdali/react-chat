@@ -7,8 +7,9 @@ class Chat extends React.Component {
              <form action="" className="send-msg" onSubmit={this.goToChat}> 
                 <input type="text" ref={this.myName} required placeholder="Type a message"/>
                 <button type ="submit">Submit</button>
+                
             </form>
-            <p>{Object.keys(this.props.messages).map((msg, i) => `${msg.id} ${msg.text}` )}</p>
+            <p>{this.props.messages.map((msg,i) => `${msg.id}: ${msg.text}`)}</p>
             
             </div>
         )
